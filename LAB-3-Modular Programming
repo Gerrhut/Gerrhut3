@@ -1,0 +1,99 @@
+# 71200595 Gerry Sunjay Junjung
+# Ibunya Matahari memberitahukan kepada Ibunya Mawar, Melati dan Jasmine bahwa beliau barusaja membeli Ayam Kampung 
+# ditempat Pak Mamat sebanyak 4 Kg dengan diskon 15% untuk Ayam Kampung, 3 Kg untuk
+# Ayam Potong dan 4 ekor untuk Ayam Kate
+# Pertanyaan
+# 1. Berapa total harga yang dibeli Oleh Ibunya Matahari dan kembaliannya jika dia membayar dengan uang Rp.200.000
+# 2. Berapa yang harus dibayar Ibunya Mawar jika dia membeli 3 ekor Ayam Potong dan membayar dengan uang Pas
+# 3. Berapa yang harus dibayar Ibunya Jasmine jika dia membeli 5 Kg Ayam Kate dan membayar dengan uang Rp.190.000
+# 4. berapa yang harus dibayar Ibunya Melati jika dia membeli 2 Kg Ayam Bangkok dan membayar dengan uang Rp.130.000
+print('=============== Kasir Pak Mamat ===============')
+print('1. Ayam Kampung = Rp.40000 /Kg')
+print('2. Ayam Potong  = Rp.48000 /Kg')
+print('3. Ayam Bangkok = Rp.62000 /Kg')
+print('4. Ayam Kate    = Rp.37000 /Ekor')
+
+
+def Kasir():
+    nama = input("Nama Costumer : ")
+    pilih = int(input("Masukkan Pilihan Belanjaan : "))
+    if pilih == 1:
+        def Kampung():
+            banyak = float(input("Banyak Daging Ayam Satuan Kg : "))
+            if banyak == 4:
+                beli = banyak*40000
+                diskon = beli*15/100
+                totalK = beli-diskon
+                print ('Ayam Kampung sebanyak ',banyak,' Kg Adalah Rp.',totalK)
+                bayar = float(input("Masukkan Pembayaran : Rp."))
+                if bayar > totalK:
+                    print ('Kembalian Rp.',bayar-totalK)
+                else:
+                    print ('Kembalian Rp.',bayar-totalK)
+            else:
+                beliK = banyak*40000
+                print ('Ayam Kampung Sebanyak ',banyak,' Kg Adalah Rp.',beliK)
+                bayar = float(input("Masukkan Pembayaran : Rp."))
+                if bayar > beliK:
+                    print ('Kembalian Rp.',bayar-beliK)
+                else:
+                    print ('Kembalian Rp.',bayar-beliK)
+        Kampung()
+    elif pilih == 2:
+        def Potong():
+            banyak = float(input("Banyak Daging Ayam Satuan Kg : "))
+            if banyak == 3:
+                beli = banyak*48000
+                diskon = beli*15/100
+                totalP = beli-diskon
+                print ('Ayam Potong sebanyak ',banyak,' Kg Adalah Rp.',totalP)
+                bayar = float(input("Masukkan Pembayaran : Rp."))
+                if bayar > totalP:
+                    print ('Kembalian Rp.',bayar-totalP)
+                else:
+                    print ('Kembalian Rp.',bayar-totalP)
+            else:
+                beliP = banyak*48000
+                print ('Ayam Potong Sebanyak ',banyak,' Kg Adalah Rp.',beliP)
+                bayar = float(input("Masukkan Pembayaran : Rp."))
+                if bayar > beliP:
+                    print ('Kembalian Rp.',bayar-beliP)
+                else:
+                    print ('Kembalian Rp.',bayar-beliP)
+        Potong()
+    elif pilih == 3:
+        def Bangkok():
+            banyak = float(input("Banyak Daging Ayam Satuan Kg : "))
+            beliB = banyak*62000
+            print ('Ayam Bangkok Sebanyak ',banyak,' Kg Adalah Rp.',beliB)
+            bayar = float(input("Masukkan Pembayaran : Rp."))
+            if bayar > beliB:
+                print ('Kembalian Rp.',bayar-beliB)
+            else:
+                print ('Kembalian Rp.',bayar-beliB)
+        Bangkok()
+    elif pilih == 4:
+        def Kate():
+            banyak = float(input("Banyak Daging Ayam Satuan Ekor : "))
+            if banyak == 4:
+                beli = banyak*37000
+                diskon = beli*15/100
+                totalE = beli-diskon
+                print ('Ayam Kate sebanyak ',banyak,' Ekor Adalah Rp.',totalE)
+                bayar = float(input("Masukkan Pembayaran : Rp."))
+                if bayar > totalE:
+                    print ('Kembalian Rp.',bayar-totalE)
+                else:
+                    print ('Kembalian Rp.',bayar-totalE)
+            else:
+                beliE = banyak*37000
+                print ('Ayam Kate Sebanyak ',banyak,' Ekor Adalah Rp.',beliE)
+                bayar = float(input("Masukkan Pembayaran : Rp."))
+                if bayar > beliE:
+                    print ('Kembalian Rp.',bayar-beliE)
+                else:
+                    print ('Kembalian Rp.',bayar-beliE)
+        Kate()
+    else:
+        print ('Maaf Jenis Ayam Tidak Ada Silahkan Input Ulang')
+Kasir()
